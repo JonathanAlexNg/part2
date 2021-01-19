@@ -1,0 +1,17 @@
+
+version: '3'
+
+
+services:
+
+  # Busybox, mount folder, print when not in -d mode
+  service-1:
+    image: busybox
+    volumes:
+      - ./:/mounted_folder
+    command: |
+      echo "Here is busybox"
+
+  # hello-world
+  service-2:
+    image: hello-world
